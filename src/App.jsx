@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import BankingValuation from "./BankingValuation";
 import CAGRCalculator from "./CAGR";
+import DCFCalculator from "./DCF";  // ✅ Import DCF Page
 
 export default function App() {
   return (
@@ -9,12 +10,14 @@ export default function App() {
       <div style={navBarStyle}>
         <Link to="/" style={navLinkStyle}>📊 Banking Valuation</Link>
         <Link to="/cagr" style={navLinkStyle}>📈 CAGR Calculator</Link>
+        <Link to="/dcf" style={navLinkStyle}>💰 DCF Calculator</Link>
       </div>
 
       {/* Page Routing */}
       <Routes>
         <Route path="/" element={<BankingValuation />} />
         <Route path="/cagr" element={<CAGRCalculator />} />
+        <Route path="/dcf" element={<DCFCalculator />} />  {/* ✅ Added DCF Route */}
       </Routes>
     </Router>
   );

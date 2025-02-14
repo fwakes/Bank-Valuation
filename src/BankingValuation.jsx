@@ -1,12 +1,12 @@
 import { useState } from "react";
 
 export default function BankingValuation() {
-  const [roe, setRoe] = useState(19.0);
-  const [coE, setCoE] = useState(14.0);
-  const [growth, setGrowth] = useState(5.0);
-  const [equity, setEquity] = useState(314485);
-  const [shares, setShares] = useState("151.56"); // Keep as a string for input
-  const [price, setPrice] = useState(3860);
+  const [roe, setRoe] = useState("");
+  const [coE, setCoE] = useState("");
+  const [growth, setGrowth] = useState("");
+  const [equity, setEquity] = useState("");
+  const [shares, setShares] = useState(""); // Keep as a string for input
+  const [price, setPrice] = useState("");
 
   const pbv = (roe - growth) / (coE - growth);
   const intrinsicValue = Math.round(pbv * equity); // No decimals
